@@ -10,6 +10,8 @@ import { getCommissions } from 'apis/api/commissions';
 function Home() {
   const [carouselBackground, setCarouselBackground] = useState(null);
 
+  console.log(process.env);
+
   const changeCarouselImage = target => {
     setCarouselBackground(target);
   };
