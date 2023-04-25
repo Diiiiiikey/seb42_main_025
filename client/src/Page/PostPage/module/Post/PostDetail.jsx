@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import Typography from 'Components/Typography';
 import TagComponent from 'Components/TagComponent';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -50,15 +50,7 @@ export function PostDetail({ commission }) {
             flex={2}
             color="tea_2"
           />
-          <Button
-            text="신청하기"
-            handleClick={handleClick}
-            addStyle={{
-              radius: 'base',
-              height: 'h_s',
-              width: 'full',
-            }}
-          />
+          <Buttons text="신청하기" handleClick={handleClick} buttonStyle="long" />
         </Summary>
       )}
     </>

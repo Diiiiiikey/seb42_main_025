@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import InputComponent from 'Components/InputComponent';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import { Container } from 'Container/Container';
 import TextEditor from 'Components/Editor';
 import { Dropzone, CreateTag, InputText } from './module';
@@ -15,6 +15,7 @@ function CreatePost() {
   const [isBlank, setIsBlank] = useState(false);
   const [commission, setCommission] = useState(null);
   const [loading, setLoading] = useState(true);
+
   console.log(loading);
   const titleRef = useRef(null);
   const subContentRef = useRef(null);
@@ -111,16 +112,11 @@ function CreatePost() {
             </Alert>
           )}
           <ButtonBox>
-            <Button
+            <Buttons
               text="등록"
               buttonType="submit"
               handleClick={handleSubmit}
-              addStyle={{
-                width: 'w_xl',
-                height: 'h_m',
-                radius: 'base',
-                padding: '1rem',
-              }}
+              buttonStyle="write"
             />
           </ButtonBox>
         </ContentBox>
@@ -163,7 +159,6 @@ const ButtonBox = styled.div`
 
 const Toast = styled.div`
   margin-top: 3rem;
-  padding: 1rem;
   border-radius: 0.25rem;
 `;
 

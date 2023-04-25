@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import TextEditor from 'Components/Editor';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import { useEffect, useRef, useState } from 'react';
 
 export function ReviewModal({ openReviewerHandler }) {
@@ -30,15 +30,7 @@ export function ReviewModal({ openReviewerHandler }) {
             <TextEditor currentWidth={currentWidth} toolbarItems={toolbarItems} />
           </StyledMain>
           <StyledSubButton>
-            <Button
-              text="리뷰 등록"
-              addStyle={{
-                fontSize: 'm',
-                padding: '0 1rem',
-                backgroundColor: 'tea_1',
-                color: 'white',
-              }}
-            />
+            <Buttons text="리뷰 등록" buttonStyle="write" />
           </StyledSubButton>
         </StyledContent>
       </ModalView>

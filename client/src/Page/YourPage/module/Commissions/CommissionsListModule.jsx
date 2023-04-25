@@ -1,4 +1,4 @@
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import Typography from 'Components/Typography';
 import { useNavigate } from 'react-router';
 import styled from 'styled-components';
@@ -26,16 +26,7 @@ function CommissionsListModule({ info }) {
           color="tea_2"
           padding="m"
         />
-        <Button
-          text="커미션등록"
-          handleClick={handleClick}
-          addStyle={{
-            padding: '0.5rem 1rem',
-            backgroundColor: 'tea_1',
-            height: 'h_s',
-            color: 'white',
-          }}
-        />
+        <Buttons text="커미션등록" handleClick={handleClick} buttonStyle="write" />
       </StyledHeader>
       {/* <TitleTypography text="커미션 목록"/> */}
       {/* 로그인 x */}

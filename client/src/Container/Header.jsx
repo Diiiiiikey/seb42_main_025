@@ -3,7 +3,7 @@ import mainLogo from 'assets/Main_logo.png';
 import InputComponent from 'Components/InputComponent';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useState } from 'react';
 
@@ -70,41 +70,26 @@ function Header() {
             <StyledYour onClick={handledClickMember}>
               <AccountCircleIcon sx={{ fontSize: 40 }} />
             </StyledYour>
-            <Button
+            <Buttons
               text="로그아웃"
               handleClick={handleLogout}
-              addStyle={{
-                width: 'w_m',
-                height: 'h_xxs',
-                margin: '0 2rem 0 0',
-                backgroundColor: 'transparent',
-              }}
+              buttonStyle="header"
+              margin="0 1rem 0 0"
             />
           </>
         ) : (
           <>
-            <Button
+            <Buttons
               text="로그인"
               handleClick={handleClickLogin}
-              addStyle={{
-                width: 'w_m',
-                margin: '0 1rem',
-                height: 'h_xxs',
-                color: 'tea_2',
-                fontSize: 'm',
-                backgroundColor: 'transparent',
-              }}
+              buttonStyle="header"
+              color="tea_2"
             />
-            <Button
+            <Buttons
               text="회원가입"
               handleClick={handleClickSignUp}
-              addStyle={{
-                width: 'w_m',
-                height: 'h_xxs',
-                margin: '0 2rem 0 0',
-                fontSize: 'm',
-                backgroundColor: 'transparent',
-              }}
+              buttonStyle="header"
+              margin="0 1rem 0 0"
             />
           </>
         )}
@@ -139,7 +124,6 @@ const StyledContainer = styled.div`
 
 const StyledLogo = styled.img`
   display: grid;
-  grid-column: 1 / span 1;
   cursor: pointer;
 `;
 

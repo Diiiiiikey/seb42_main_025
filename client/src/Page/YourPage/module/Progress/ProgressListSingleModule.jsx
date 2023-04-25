@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import StateComponent from 'Components/StateComponent';
 import Typography from 'Components/Typography';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import ProgressTradeListModule from './ProgressTradeListModule';
 import ImageComponent from 'Components/ImageComponent';
 import { useState } from 'react';
@@ -67,88 +67,25 @@ function ProgressListSingleModule({ info }) {
           </StyledComponentContainer>
           {info.status === '수락대기' ? (
             <StyledButtonContainer>
-              <Button
-                text="채팅"
-                addStyle={{
-                  borderRadius: 'half',
-                  padding: '0.5rem 1rem',
-                  margin: '0.5rem',
-                  backgroundColor: 'tea_2',
-                  border: '1px',
-                  borderColor: 'tea_1',
-                  color: 'white',
-                }}
-              />
+              <Buttons text="채팅" buttonStyle="smallEdit" />
               <StyledRightButtons>
-                <Button
+                <Buttons
                   text="수락"
                   handleClick={clickedStatus}
                   id={info.tradeId}
-                  addStyle={{
-                    borderRadius: 'half',
-                    padding: '0.5rem 1rem',
-                    margin: '0.5rem',
-                    backgroundColor: 'tea_2',
-                    border: '1px',
-                    borderColor: 'tea_1',
-                    color: 'white',
-                  }}
+                  buttonStyle="smallEdit"
                 />
-                <Button
-                  text="거절"
-                  handleClick={clickedStatus}
-                  addStyle={{
-                    borderRadius: 'half',
-                    padding: '0.5rem 1rem',
-                    margin: '0.5rem',
-                    border: '1px',
-                    borderColor: 'black',
-                  }}
-                />
+                <Buttons text="거절" handleClick={clickedStatus} buttonStyle="smallEdit" />
               </StyledRightButtons>
             </StyledButtonContainer>
           ) : info.status === '진행 중' ? (
             <StyledButtonContainer>
-              <Button
-                text="채팅"
-                addStyle={{
-                  borderRadius: 'half',
-                  padding: '0.5rem 1rem',
-                  margin: '0.5rem',
-                  backgroundColor: 'tea_2',
-                  border: '1px',
-                  borderColor: 'tea_1',
-                  color: 'white',
-                }}
-              />
+              <Buttons text="채팅" buttonStyle="smallEdit" />
             </StyledButtonContainer>
           ) : info.status === '완료' ? (
             <StyledButtonContainer>
-              <Button
-                text="채팅"
-                addStyle={{
-                  borderRadius: 'half',
-                  padding: '0.5rem 1rem',
-                  margin: '0.5rem',
-                  backgroundColor: 'tea_2',
-                  border: '1px',
-                  borderColor: 'tea_1',
-                  color: 'white',
-                }}
-              />
-              <Button
-                text="리뷰작성"
-                handleClick={openReviewerHandler}
-                addStyle={{
-                  borderRadius: 'half',
-                  padding: '0.5rem 1rem',
-                  margin: '0.5rem',
-                  backgroundColor: 'tea_2',
-                  border: '1px',
-                  borderColor: 'tea_1',
-                  color: 'white',
-                }}
-              />
+              <Buttons text="채팅" buttonStyle="smallEdit" />
+              <Buttons text="리뷰작성" handleClick={openReviewerHandler} buttonStyle="smallEdit" />
               {isOpen === true ? <ReviewModal openReviewerHandler={openReviewerHandler} /> : null}
             </StyledButtonContainer>
           ) : null}
@@ -201,10 +138,12 @@ const StyledClient = styled.div`
 const StyledButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 0.5rem;
 `;
 
 const StyledRightButtons = styled.div`
   display: flex;
+  gap: 0.5rem;
 `;
 
 export default ProgressListSingleModule;

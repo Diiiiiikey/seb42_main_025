@@ -32,7 +32,7 @@ function CommissionListSingleModule({ info }) {
   );
 }
 
-const StyledSummaryBox = styled.button`
+const StyledSummaryBox = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
@@ -44,14 +44,6 @@ const StyledSummaryBox = styled.button`
   box-shadow: 0 0 0.5rem 0 #999999;
 
   cursor: pointer;
-
-  &:hover {
-    filter: brightness(90%);
-  }
-  &:active {
-    filter: brightness(70%);
-    transform: translate(0, 1px);
-  }
 `;
 
 const TextContainer = styled.div`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import InputComponent from 'Components/InputComponent';
 import ChatServeModule from './ChatServeModule';
 import Typography from 'Components/Typography';
@@ -32,7 +32,7 @@ function ChatContentModule() {
       </StyledChatContainer>
       <StyledInputContainer>
         <InputComponent />
-        <Button text="보내기" addStyle={{ width: 'w_m', height: 'h_m', margin: '0 0 0 1rem' }} />
+        <Buttons text="보내기" buttonStyle="edit" />
       </StyledInputContainer>
     </StyledContainer>
   );

@@ -106,6 +106,45 @@ const radiuses = {
   l: '1rem',
 };
 
+const buttons = {
+  header: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    size: fontSizes.m,
+  },
+  write: {
+    backgroundColor: colors.tea_1,
+    border: 'none',
+    size: fontSizes.m,
+    color: colors.white,
+    padding: '0.5rem 1.5rem',
+    borderRadius: radiuses.base,
+  },
+  edit: {
+    backgroundColor: colors.gray_2,
+    border: 'none',
+    size: fontSizes.m,
+    padding: '0.5rem 1.5rem',
+    borderRadius: radiuses.base,
+  },
+  smallEdit: {
+    backgroundColor: colors.white,
+    size: fontSizes.m,
+    border: `1px solid ${colors.gray_1}`,
+    padding: '0.25rem 0.75rem',
+    borderRadius: radiuses.half,
+  },
+  long: {
+    backgroundColor: colors.tea_1,
+    border: 'none',
+    size: fontSizes.m,
+    color: colors.white,
+    padding: '1rem 0',
+    borderRadius: radiuses.base,
+    width: '100%',
+  },
+};
+
 const theme = {
   fontSizes,
   paddings,
@@ -116,6 +155,7 @@ const theme = {
   radiuses,
   sizes,
   device,
+  buttons,
 };
 
 export default theme;

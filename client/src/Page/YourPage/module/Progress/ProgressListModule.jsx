@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ProgressListSingleModule from './ProgressListSingleModule';
 import Typography from 'Components/Typography';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import { useState } from 'react';
 import { getTradeSubInfoFn } from 'customHook/getTradeSubInfoFetch';
 import LoadingComponent from 'Components/LoadingComponent';
@@ -30,22 +30,18 @@ export function ProgressListModule({ infos }) {
           ))}
           <StyledButtonArea>
             {isMore ? (
-              <Button
+              <Buttons
                 text="줄이기"
                 handleClick={moreClicked}
-                addStyle={{
-                  backgroundColor: 'transparent',
-                  margin: '1.5rem 0 0 0 ',
-                }}
+                buttonStyle="header"
+                margin="1.5rem 0 0 0"
               />
             ) : (
-              <Button
+              <Buttons
                 text="더보기"
                 handleClick={moreClicked}
-                addStyle={{
-                  backgroundColor: 'transparent',
-                  margin: '1.5rem 0 0 0 ',
-                }}
+                buttonStyle="header"
+                margin="1.5rem 0 0 0"
               />
             )}
           </StyledButtonArea>

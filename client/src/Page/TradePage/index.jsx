@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate, useParams } from 'react-router-dom';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import TradeModuleBox from './module/TradeModuleBox';
 import TextEditor from 'Components/Editor';
 import { postTrade } from 'apis/api/trade';
@@ -58,7 +58,7 @@ function TradePage() {
         onSubmit={handleSubmit}
         style={{ position: 'absolute', bottom: '4rem', right: '0.5rem' }}
       >
-        <Button type="submit" text="신청하기" addStyle={{ padding: '0.5rem 1rem' }} />
+        <Buttons type="submit" text="신청하기" buttonStyle="write" />
       </form>
     </Container>
   );

@@ -2,9 +2,9 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import mainLogo from 'assets/Main_logo.png';
 import InputComponent from 'Components/InputComponent';
-import Button from 'Components/Button';
-import { emailValidate, passwordValidate } from '../utils/validata';
-import { login } from '../apis/api/login';
+import Buttons from 'Components/Buttons';
+import { emailValidate, passwordValidate } from 'utils/validata';
+import { login } from 'apis/api/login';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -64,16 +64,11 @@ const Login = () => {
             type="password"
           />
 
-          <Button
+          <Buttons
             text="로그인"
             buttonType="submit"
             handleClick={handleSubmit}
-            addStyle={{
-              width: 'w_xxxxl',
-              height: 'h_l',
-              backgroundColor: 'tea_1',
-              color: 'white',
-            }}
+            buttonStyle="long"
           />
         </LoginContainer>
       </Container>

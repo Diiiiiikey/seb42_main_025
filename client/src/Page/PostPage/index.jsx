@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import { Review } from './module/Review';
 // import Commission from 'Components/Commissions';
 import { PostDetail, PostMain, PostImage } from './module/Post';
@@ -52,28 +52,10 @@ function Post() {
           </ReviewBox>
           <Edit>
             <EditButton>
-              <Button
-                text="수정"
-                handleClick={onclickEdit}
-                addStyle={{
-                  width: 'w_xl',
-                  height: 'h_m',
-                  radius: 'base',
-                  padding: '1rem',
-                }}
-              />
+              <Buttons text="수정" handleClick={onclickEdit} buttonStyle="edit" />
             </EditButton>
             <EditButton>
-              <Button
-                text="삭제"
-                handleClick={onclickDelete}
-                addStyle={{
-                  width: 'w_xl',
-                  height: 'h_m',
-                  radius: 'base',
-                  padding: '1rem',
-                }}
-              />
+              <Buttons text="삭제" handleClick={onclickDelete} buttonStyle="edit" />
             </EditButton>
           </Edit>
           {/* <CommissionBox>

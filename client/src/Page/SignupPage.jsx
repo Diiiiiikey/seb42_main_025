@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import InputComponent from 'Components/InputComponent';
-import Button from 'Components/Button';
+import Buttons from 'Components/Buttons';
 import { emailValidate, passwordValidate, nicknameValidate } from '../utils/validata';
 import { signup } from '../apis/api/signup';
 
@@ -87,11 +87,11 @@ const SignUpPage = () => {
             onBlur={() => nicknameValidate(nickname, setNicknameError)}
             error={NicknameError}
           />
-          <Button
+          <Buttons
             text="회원가입"
             buttonType="submit"
             handleClick={handleSubmit}
-            addStyle={{ width: 'w_xxxxl', height: 'h_l', backgroundColor: 'tea_1', color: 'white' }}
+            buttonStyle="long"
           />
         </SignUpContainer>
       </Container>
