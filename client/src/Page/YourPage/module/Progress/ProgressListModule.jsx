@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import ProgressListSingleModule from './ProgressListSingleModule';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import Buttons from 'Components/Buttons';
 import { useState } from 'react';
 import { getTradeSubInfoFn } from 'customHook/getTradeSubInfoFetch';
@@ -20,7 +20,7 @@ export function ProgressListModule({ infos }) {
       {filteredInfos && filteredInfos.length === infos.length ? (
         <>
           <StyledHeaderArea>
-            <Typography text="신청 의뢰" variant="h3" size="l" bold="bold" />
+            <Typographies text="신청 의뢰" typoStyle="title_3" />
             {filteredInfos && <div>{filteredInfos.length}</div>}
           </StyledHeaderArea>
           {filteredInfos.map(filteredInfo => (

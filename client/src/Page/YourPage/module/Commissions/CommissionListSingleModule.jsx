@@ -1,4 +1,4 @@
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import ImageComponent from 'Components/ImageComponent';
 import styled from 'styled-components';
 import TagComponent from 'Components/TagComponent';
@@ -18,8 +18,7 @@ function CommissionListSingleModule({ info }) {
         <>
           <ImageComponent src={info.imageUrl[1]} alt={info.title} imgStyle="commission" width="m" />
           <TextContainer>
-            <Typography text={info.title} bold="bold" line={1} size="l" variant="h3" />
-            <Typography text={info.content} line={2} size="m" lineHeight="l" variant="p" />
+            <Typographies text={info.title} typoStyle="title_3" />
             <StyledTags>
               {info.tags.map(el => (
                 <TagComponent key={el} text={el} />
@@ -37,8 +36,8 @@ const StyledSummaryBox = styled.div`
   align-items: center;
   width: 100%;
   max-height: 8.5rem;
-  padding: 0.5rem 1rem;
-  gap: 1rem;
+  padding: 1rem;
+  gap: 1.5rem;
   background-color: #fff;
   border-radius: 0.25rem;
   box-shadow: 0 0 0.5rem 0 #999999;
@@ -50,7 +49,7 @@ const TextContainer = styled.div`
   display: grid;
   width: 100%;
   padding-top: 0.5rem;
-  gap: 0.5rem;
+  gap: 1rem;
 `;
 
 const StyledTags = styled.div`

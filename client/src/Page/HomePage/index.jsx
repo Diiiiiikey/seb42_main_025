@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Carousel from 'Components/Carousel';
 import Commissions from 'Components/Commissions';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import AdComponent from 'Components/AdComponent';
 import { useEffect, useState } from 'react';
 import { getCommissionsFn, getTagsCommissionsFn } from 'customHook/getCommissionFetch';
@@ -46,39 +46,20 @@ function Home() {
               </CarouselBox>
               <CarouselBoxBackground url={carouselBackground} />
               <SellContainer>
-                <Typography
-                  variant="h2"
-                  text="새로운 커미션"
-                  size="xl"
-                  bold="bold"
-                  space="nowrap"
-                  color="tea_2"
-                  padding="m"
-                />
+                <Typographies text="새로운 커미션" typoStyle="title_1" variant="h2" margin="1rem" />
                 <Commissions commissions={commissionsFilterdCommissionId} />
               </SellContainer>
               <AdComponent />
               <SellContainer>
-                <Typography
-                  variant="h2"
-                  text="인기 커미션"
-                  size="xl"
-                  bold="bold"
-                  space="nowrap"
-                  color="tea_2"
-                  padding="m"
-                />
+                <Typographies text="인기 커미션" typoStyle="title_1" variant="h2" margin="1rem" />
                 <Commissions commissions={commissionsFilterdViewCount} />
               </SellContainer>
               <SellContainer>
-                <Typography
-                  variant="h2"
+                <Typographies
                   text="추천 태그 커미션"
-                  size="xl"
-                  bold="bold"
-                  space="nowrap"
-                  color="tea_2"
-                  padding="m"
+                  typoStyle="title_1"
+                  variant="h2"
+                  margin="1rem"
                 />
                 <Commissions commissions={commissionsFilterdTags.tagsCommissions} />
               </SellContainer>

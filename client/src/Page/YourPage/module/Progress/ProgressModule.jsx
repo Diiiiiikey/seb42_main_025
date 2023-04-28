@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import ProgressListModule from './ProgressListModule';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import { getTradeFn } from 'customHook/getTradeFetch';
 import { useParams } from 'react-router-dom';
 
@@ -22,15 +22,7 @@ export function ProgressModule({ info }) {
   return (
     <StyledContainer>
       <TitleContainer>
-        <Typography
-          variant="h2"
-          text="진행목록"
-          size="xl"
-          bold="bold"
-          space="nowrap"
-          color="tea_2"
-          padding="m"
-        />
+        <Typographies variant="h2" text="진행목록" typoStyle="title_1" />
       </TitleContainer>
       {tradeInfo[0] && (
         <StyledListContainer>

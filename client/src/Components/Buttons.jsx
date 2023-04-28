@@ -18,7 +18,6 @@ function Buttons({ buttonType, text, handleClick, id, buttonStyle, color, margin
 const StyledButton = styled.button.attrs(props => ({
   buttonStyle: props.buttonStyle,
 }))`
-  ${props => console.log(props)};
   background-color: ${props => props.theme.buttons[props.buttonStyle].backgroundColor};
   border: ${props => props.theme.buttons[props.buttonStyle].border};
   border-radius: ${props => props.theme.buttons[props.buttonStyle].borderRadius};

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Commission from 'Components/Commissions';
 import { useParams } from 'react-router-dom';
 import { getSearchFn } from 'customHook/getSearchFetch';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 
 function SearchPage() {
   const { result } = useParams();
@@ -15,15 +15,8 @@ function SearchPage() {
         <Content>
           <SearchResult>
             <StyledTitleContainer>
-              <Typography
-                text={result}
-                variant="h2"
-                size="xxxl"
-                color="tea_2"
-                space="nowrap"
-                bold="bold"
-              />
-              <Typography text="에 대한 검색 결과" variant="p" color="gray_3" space="nowrap" />
+              <Typographies text={result} variant="h2" typoStyle="title_1" />
+              <Typographies text="에 대한 검색 결과" typoStyle="small" />
             </StyledTitleContainer>
           </SearchResult>
           <CommissionBox>
@@ -40,7 +33,7 @@ const Content = styled.div`
   width: 100%;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(auto, minmax(3.5rem, auto));
-  gap: 5rem 0;
+  gap: 3rem 0;
 `;
 
 const SearchResult = styled.div`
@@ -53,6 +46,7 @@ const SearchResult = styled.div`
 const StyledTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 1rem;
   gap: 0.5rem;
 `;
 

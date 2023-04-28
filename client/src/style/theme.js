@@ -16,12 +16,13 @@ const fontSizes = {
   xxs: calcRem(4),
   xs: calcRem(8),
   s: calcRem(12),
-  m: calcRem(16),
-  base: calcRem(18),
-  l: calcRem(20),
+  content: calcRem(14),
+  base: calcRem(16),
+  l: calcRem(18),
+  zl: calcRem(20),
   xl: calcRem(24),
-  xxl: calcRem(28),
-  xxxl: calcRem(32),
+  title: calcRem(28),
+  carousel: calcRem(32),
 };
 
 const paddings = {
@@ -50,6 +51,7 @@ const imgSizes = {
   xs: calcRem(48),
   s: calcRem(64),
   m: calcRem(128),
+  l: calcRem(160),
   xl: calcRem(240),
   xxl: calcRem(400),
   xxxl: calcRem(640),
@@ -79,6 +81,7 @@ const sizes = {
   h_zzl: calcRem(256),
   h_xxxl: calcRem(238),
   h_xxxxl: calcRem(256),
+  h_xxxxxl: calcRem(448),
 };
 
 const imgStyles = {
@@ -110,12 +113,12 @@ const buttons = {
   header: {
     backgroundColor: 'transparent',
     border: 'none',
-    size: fontSizes.m,
+    size: fontSizes.base,
   },
   write: {
     backgroundColor: colors.tea_1,
     border: 'none',
-    size: fontSizes.m,
+    size: fontSizes.base,
     color: colors.white,
     padding: '0.5rem 1.5rem',
     borderRadius: radiuses.base,
@@ -123,13 +126,13 @@ const buttons = {
   edit: {
     backgroundColor: colors.gray_2,
     border: 'none',
-    size: fontSizes.m,
+    size: fontSizes.base,
     padding: '0.5rem 1.5rem',
     borderRadius: radiuses.base,
   },
   smallEdit: {
     backgroundColor: colors.white,
-    size: fontSizes.m,
+    size: fontSizes.base,
     border: `1px solid ${colors.gray_1}`,
     padding: '0.25rem 0.75rem',
     borderRadius: radiuses.half,
@@ -137,11 +140,79 @@ const buttons = {
   long: {
     backgroundColor: colors.tea_1,
     border: 'none',
-    size: fontSizes.m,
+    size: fontSizes.base,
     color: colors.white,
     padding: '1rem 0',
     borderRadius: radiuses.base,
     width: '100%',
+  },
+};
+
+const typos = {
+  title_1: {
+    size: fontSizes.title,
+    bold: 'bold',
+    color: colors.tea_2,
+    space: 'nowrap',
+  },
+  title_2: {
+    size: fontSizes.title,
+    bold: 'bold',
+    height: sizes.h_s,
+    line: 2,
+  },
+  title_3: {
+    size: fontSizes.xl,
+    bold: 'bold',
+    height: sizes.h_xs,
+    lineHeight: fontSizes.xl,
+  },
+  title_4: {
+    size: fontSizes.zl,
+    bold: 'bold',
+  },
+  carousel: {
+    size: fontSizes.carousel,
+    bold: 'bold',
+    color: colors.tea_2,
+    space: 'nowrap',
+    textShadow: '-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white',
+  },
+  commissions: {
+    size: fontSizes.base,
+    bold: 'bold',
+    height: sizes.h_xs,
+  },
+  commissionSub: {
+    size: fontSizes.base,
+    height: sizes.h_xxxxxl,
+    lineHeight: fontSizes.xl,
+  },
+  commissionMain: {
+    size: fontSizes.base,
+    lineHeight: fontSizes.xl,
+  },
+  name: {
+    size: fontSizes.l,
+    bold: 'bold',
+    color: colors.tea_2,
+  },
+  name_2: {
+    size: fontSizes.base,
+    bold: 'bold',
+    color: colors.tea_2,
+  },
+  base: {
+    size: fontSizes.base,
+  },
+  base_2: {
+    size: fontSizes.content,
+    bold: 'bold',
+    color: colors.gray_3,
+  },
+  date: {
+    size: fontSizes.s,
+    color: colors.gray_3,
   },
 };
 
@@ -156,6 +227,7 @@ const theme = {
   sizes,
   device,
   buttons,
+  typos,
 };
 
 export default theme;

@@ -5,6 +5,7 @@ import Buttons from 'Components/Buttons';
 import TradeModuleBox from './module/TradeModuleBox';
 import TextEditor from 'Components/Editor';
 import { postTrade } from 'apis/api/trade';
+import Typographies from 'Components/Typographies';
 
 function TradePage() {
   const [title, setTitle] = useState('');
@@ -41,7 +42,9 @@ function TradePage() {
   return (
     <Container>
       <TradeModuleBox />
-      <TitleLabel>제목</TitleLabel>
+      <TitleLabel>
+        <Typographies text="제목" typoStyle="base" />
+      </TitleLabel>
       <TitleInput
         type="text"
         placeholder="제목을 입력하세요."

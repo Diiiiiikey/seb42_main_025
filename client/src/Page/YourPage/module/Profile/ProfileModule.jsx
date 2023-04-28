@@ -1,5 +1,5 @@
 import Buttons from 'Components/Buttons';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import styled from 'styled-components';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ImageComponent from 'Components/ImageComponent';
@@ -17,13 +17,8 @@ function ProfileModule({ info }) {
       </StyledImgContainer>
       {info && (
         <>
-          <Typography text={info.nickname} size="xxxl" bold="bold" />
-          <Typography
-            text={`since ${info.createdAt.substr(0, 10)}`}
-            color="gray_3"
-            line={25}
-            lineHeight="l"
-          />
+          <Typographies text={info.nickname} typoStyle="name" />
+          <Typographies text={`since ${info.createdAt.substr(0, 10)}`} typoStyle="date" />
         </>
       )}
     </StyledContainer>

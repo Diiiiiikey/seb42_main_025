@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import Buttons from 'Components/Buttons';
-import { Review } from './module/Review';
 // import Commission from 'Components/Commissions';
 import { PostDetail, PostMain, PostImage } from './module/Post';
 import { Container } from 'Container/Container';
@@ -47,9 +46,6 @@ function Post() {
           <DetailBox>
             <PostMain commission={commission.data} />
           </DetailBox>
-          <ReviewBox>
-            <Review commission={commission.data} />
-          </ReviewBox>
           <Edit>
             <EditButton>
               <Buttons text="수정" handleClick={onclickEdit} buttonStyle="edit" />
@@ -114,11 +110,6 @@ const Edit = styled.div`
 
 const EditButton = styled.div`
   margin: 0.5rem;
-`;
-
-const ReviewBox = styled.div`
-  width: 100%;
-  line-height: 1.6;
 `;
 
 // const CommissionBox = styled.div`

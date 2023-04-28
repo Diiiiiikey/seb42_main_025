@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 // import { getCommissionFn } from 'customHook/getCommissionFetch';
 import ImageComponent from './ImageComponent';
-import Typography from './Typography';
+import Typographies from './Typographies';
 import { useState } from 'react';
 
 function Carousel({ items, changeCarouselImage }) {
@@ -27,15 +27,14 @@ function Carousel({ items, changeCarouselImage }) {
 
   return (
     <Container>
-      <Typography
+      <Typographies
+        variant="h1"
         text={
           (img === 0 && '새로운 커미션') ||
           (img === 1 && '인기 커미션') ||
           (img === 2 && `${items[2].tags[0]} 태그 커미션`)
         }
-        size="xxxl"
-        color="tea_2"
-        bold="bold"
+        typoStyle="carousel"
         textShadow=" -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white"
       />
 

@@ -1,5 +1,5 @@
 import Buttons from 'Components/Buttons';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import { useNavigate } from 'react-router';
 import styled from 'styled-components';
 import CommissionListSingleModule from './CommissionListSingleModule';
@@ -17,18 +17,10 @@ function CommissionsListModule({ info }) {
   return (
     <StyledContainer>
       <StyledHeader>
-        <Typography
-          variant="h2"
-          text="커미션 목록"
-          size="xl"
-          bold="bold"
-          space="nowrap"
-          color="tea_2"
-          padding="m"
-        />
+        <Typographies variant="h2" text="커미션 목록" typoStyle="title_1" margin="1rem" />
         <Buttons text="커미션등록" handleClick={handleClick} buttonStyle="write" />
       </StyledHeader>
-      {/* <TitleTypography text="커미션 목록"/> */}
+      {/* <TitleTypographies text="커미션 목록"/> */}
       {/* 로그인 x */}
       <CommissionListContainer>
         {authorCommissions &&
@@ -36,7 +28,7 @@ function CommissionsListModule({ info }) {
             <CommissionListSingleModule key={el.commissionId} info={el} />
           ))}
         {authorCommissions && authorCommissions.length ? null : (
-          <Typography text="현재 등록된 커미션이 없습니다." />
+          <Typographies text="현재 등록된 커미션이 없습니다." typoStyle="base_2" />
         )}
       </CommissionListContainer>
     </StyledContainer>

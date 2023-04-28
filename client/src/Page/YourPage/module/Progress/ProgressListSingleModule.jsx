@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import StateComponent from 'Components/StateComponent';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import Buttons from 'Components/Buttons';
-import ProgressTradeListModule from './ProgressTradeListModule';
 import ImageComponent from 'Components/ImageComponent';
 import { useState } from 'react';
 import { ReviewModal } from './ReviewModal';
@@ -31,13 +30,7 @@ function ProgressListSingleModule({ info }) {
           <StyledComponentContainer>
             <StateComponent state={info.status} />
             <StyledCommissionContainer>
-              <Typography
-                text={info.commission.title}
-                bold="bold"
-                line={1}
-                height="h_zzx"
-                margin="xxs"
-              />
+              <Typographies text={info.commission.title} typoStyle="title_4" variant="h3" />
               <StyledImgContainer>
                 {info.commission.imageUrl.map((el, idx) =>
                   idx % 2 === 0 && idx < 4 ? (
@@ -47,22 +40,14 @@ function ProgressListSingleModule({ info }) {
               </StyledImgContainer>
             </StyledCommissionContainer>
             <StyledCommission>
-              <ProgressTradeListModule info={info} />
+              <StyledSummaryBox>
+                <Typographies text={info.title} typoStyle="title_4" variant="h3" />
+                <Typographies text={info.content} typoStyle="base" />
+              </StyledSummaryBox>
             </StyledCommission>
             <StyledClient>
-              <Typography
-                text={info.member.nickname}
-                bold="bold"
-                line={1}
-                padding="xxs"
-                space="nowrap"
-              />
-              <Typography
-                text={info.createdAt.substr(0, 10)}
-                size="m"
-                color="gray_3"
-                space="nowrap"
-              />
+              <Typographies text={info.member.nickname} typoStyle="name_2" />
+              <Typographies text={info.createdAt.substr(0, 10)} typoStyle="date" />
             </StyledClient>
           </StyledComponentContainer>
           {info.status === '수락대기' ? (
@@ -106,7 +91,7 @@ const StyledComponentContainer = styled.div`
   border: 1px solid #cecece;
   border-radius: 0.25rem;
   margin-top: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
 `;
 
 const StyledCommissionContainer = styled.div`
@@ -114,6 +99,18 @@ const StyledCommissionContainer = styled.div`
   flex-direction: column;
   flex: 3;
   padding-right: 0.5rem;
+  gap: 0.5rem;
+`;
+
+const StyledSummaryBox = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1rem;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-left: 1px solid #cecece;
 `;
 
 const StyledImgContainer = styled.div`
@@ -124,14 +121,14 @@ const StyledImgContainer = styled.div`
 
 const StyledCommission = styled.div`
   display: flex;
-  flex: 10;
+  flex: 6;
 `;
 
 const StyledClient = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  flex: 3;
+  flex: 1;
   gap: 1rem;
 `;
 

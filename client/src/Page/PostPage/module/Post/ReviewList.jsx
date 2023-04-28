@@ -1,14 +1,18 @@
 import ImageComponent from 'Components/ImageComponent';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import styled from 'styled-components';
 
-export function ReviewListModule({ info }) {
+function ReviewList({ info }) {
   return (
     <StyledSummaryBox>
-      <Typography text={info.content} variant="p" flex={19} line={1} height="h_s" />
+      <Typographies text={info.content} typoStyle="base_2" />
       <ImageComponent src={info.image} alt={info.title} width="xs" imgStyles="user" />
-      <StyledWriter>{info.writer}</StyledWriter>
-      <StyledDate>{info.date}</StyledDate>
+      <StyledWriterContainer>
+        <Typographies text={info.writer} typoStyle="name_2" />
+      </StyledWriterContainer>
+      <StyledDateContainer>
+        <Typographies text={info.date} typoStyle="date" />
+      </StyledDateContainer>
     </StyledSummaryBox>
   );
 }
@@ -16,7 +20,6 @@ export function ReviewListModule({ info }) {
 const StyledSummaryBox = styled.div`
   display: flex;
   align-items: center;
-  width: 90%;
   padding: 0.5rem 1rem;
   gap: 1rem;
   border-radius: 0.25rem;
@@ -24,12 +27,14 @@ const StyledSummaryBox = styled.div`
   white-space: nowrap;
 `;
 
-const StyledWriter = styled.div`
+const StyledWriterContainer = styled.div`
   display: flex;
   flex: 2;
 `;
 
-const StyledDate = styled.div`
+const StyledDateContainer = styled.div`
   display: flex;
   flex: 2;
 `;
+
+export default ReviewList;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import TagComponent from 'Components/TagComponent';
-import Typography from 'Components/Typography';
+import Typographies from 'Components/Typographies';
 import ImageComponent from 'Components/ImageComponent';
 import { useNavigate } from 'react-router-dom';
 
@@ -37,8 +37,8 @@ function Commissions({ commissions }) {
                 imgStyle="commission"
                 width="xl"
               />
-              <Typography text={item.title} bold="bold" size="l" />
-              <Typography text={item.memberName} size="m" />
+              <Typographies text={item.title} typoStyle="commissions" margin="0.25rem 0 0 0" />
+              <Typographies text={item.memberName} typoStyle="base_2" />
             </SellBox>
           </div>
         );
