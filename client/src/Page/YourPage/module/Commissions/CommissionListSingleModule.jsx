@@ -1,5 +1,5 @@
 import Typographies from 'Components/Typographies';
-import ImageComponent from 'Components/ImageComponent';
+import Images from 'Components/Images';
 import styled from 'styled-components';
 import TagComponent from 'Components/TagComponent';
 import { useNavigate } from 'react-router-dom';
@@ -16,7 +16,7 @@ function CommissionListSingleModule({ info }) {
     <StyledSummaryBox id={info.commissionId} onClick={handleCommission}>
       {info && (
         <>
-          <ImageComponent src={info.imageUrl[1]} alt={info.title} imgStyle="commission" width="m" />
+          <Images src={info.imageUrl[1]} alt={info.title} imgStyle="postSmall" />
           <TextContainer>
             <Typographies text={info.title} typoStyle="title_3" />
             <StyledTags>

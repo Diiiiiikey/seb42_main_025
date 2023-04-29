@@ -84,11 +84,6 @@ const sizes = {
   h_xxxxxl: calcRem(448),
 };
 
-const imgStyles = {
-  user: '1 / 1',
-  commission: '4 / 3',
-};
-
 const colors = {
   black: '#000',
   white: '#fff',
@@ -107,6 +102,12 @@ const radiuses = {
   half: '10rem',
   base: '0.25rem',
   l: '1rem',
+};
+
+const imgStyles = {
+  user: '1 / 1',
+  commission: '4 / 3',
+  carousel: '2 / 1',
 };
 
 const buttons = {
@@ -216,6 +217,38 @@ const typos = {
   },
 };
 
+const images = {
+  commissions: {
+    imgStyle: imgStyles.commission,
+    width: sizes.w_xxl,
+    borderRadius: radiuses.base,
+  },
+  commission: {
+    imgStyle: imgStyles.commission,
+    width: sizes.w_m,
+    borderRadius: radiuses.base,
+  },
+  carousel: {
+    imgStyle: imgStyles.carousel,
+    width: sizes.w_xxxxxl,
+    borderRadius: radiuses.base,
+  },
+  postSmall: {
+    imgStyle: imgStyles.commission,
+    width: sizes.w_xl,
+    borderRadius: radiuses.base,
+    border: '1px solid #cecece',
+  },
+  user: {
+    imgStyle: imgStyles.user,
+    width: sizes.w_xs,
+  },
+  user_2: {
+    imgStyle: imgStyles.user,
+    width: sizes.w_xxl,
+  },
+};
+
 const theme = {
   fontSizes,
   paddings,
@@ -228,6 +261,7 @@ const theme = {
   device,
   buttons,
   typos,
+  images,
 };
 
 export default theme;

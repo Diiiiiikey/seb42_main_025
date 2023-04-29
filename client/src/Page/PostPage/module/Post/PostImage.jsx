@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import ImageComponent from 'Components/ImageComponent';
+import Images from 'Components/Images';
 import { imageProcess } from 'utils/imageProcess';
 
 export const PostImage = ({ commission }) => {
@@ -49,7 +49,7 @@ export const PostImage = ({ commission }) => {
       <ImageBox>
         {images.map((item, idx) => (
           <Button key={item.url + idx} onClick={() => onView(idx)}>
-            <ImageComponent src={item.url} alt={item.url} width="m" imgStyle="commission" />
+            <Images src={item.url} alt={item.url} imgStyle="postSmall" />
           </Button>
         ))}
       </ImageBox>
@@ -85,7 +85,6 @@ const Button = styled.button`
   border: none;
   background-color: #fff;
   margin: 6px 3px;
-  border: 1px solid #cecece;
   border-radius: 0.25rem;
   cursor: pointer;
 

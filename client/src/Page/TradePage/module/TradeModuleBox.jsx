@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { getCommissionFn } from 'customHook/getCommissionFetch.js';
 import { useParams } from 'react-router-dom';
 import LoadingComponent from 'Components/LoadingComponent';
-import ImageComponent from 'Components/ImageComponent';
+import Images from 'Components/Images';
 
 function TradeModuleBox() {
   const { id } = useParams();
@@ -13,11 +13,10 @@ function TradeModuleBox() {
     <StyledSummaryBox>
       {info.commission ? (
         <>
-          <ImageComponent
-            imgStyle="commission"
+          <Images
+            imgStyle="postSmall"
             src={info.commission.imageUrl[1]}
             alt={info.commission.title}
-            width="l"
           />
           <StyledContentContainer>
             <Typographies text={info.commission.title} variant="h2" typoStyle="title_2" />

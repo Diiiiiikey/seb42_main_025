@@ -1,4 +1,4 @@
-import ImageComponent from 'Components/ImageComponent';
+import Images from 'Components/Images';
 import Typographies from 'Components/Typographies';
 import styled from 'styled-components';
 
@@ -6,7 +6,7 @@ function ReviewList({ info }) {
   return (
     <StyledSummaryBox>
       <Typographies text={info.content} typoStyle="base_2" />
-      <ImageComponent src={info.image} alt={info.title} width="xs" imgStyles="user" />
+      <Images src={info.image} alt={info.title} imgStyle="user" />
       <StyledWriterContainer>
         <Typographies text={info.writer} typoStyle="name_2" />
       </StyledWriterContainer>

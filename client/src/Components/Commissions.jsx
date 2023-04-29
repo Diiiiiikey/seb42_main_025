@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import TagComponent from 'Components/TagComponent';
 import Typographies from 'Components/Typographies';
-import ImageComponent from 'Components/ImageComponent';
+import Images from './Images';
 import { useNavigate } from 'react-router-dom';
 
 function Commissions({ commissions }) {
@@ -31,12 +31,7 @@ function Commissions({ commissions }) {
                 })}
             </TagBox>
             <SellBox onClick={() => handleClick(item.commissionId)}>
-              <ImageComponent
-                src={item.imageUrl[1]}
-                alt={item.imageUrl[1]}
-                imgStyle="commission"
-                width="xl"
-              />
+              <Images src={item.imageUrl[1]} alt={item.imageUrl[1]} imgStyle="commissions" />
               <Typographies text={item.title} typoStyle="commissions" margin="0.25rem 0 0 0" />
               <Typographies text={item.memberName} typoStyle="base_2" />
             </SellBox>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import StateComponent from 'Components/StateComponent';
 import Typographies from 'Components/Typographies';
 import Buttons from 'Components/Buttons';
-import ImageComponent from 'Components/ImageComponent';
+import Images from 'Components/Images';
 import { useState } from 'react';
 import { ReviewModal } from './ReviewModal';
 import LoadingComponent from 'Components/LoadingComponent';
@@ -32,11 +32,11 @@ function ProgressListSingleModule({ info }) {
             <StyledCommissionContainer>
               <Typographies text={info.commission.title} typoStyle="title_4" variant="h3" />
               <StyledImgContainer>
-                {info.commission.imageUrl.map((el, idx) =>
-                  idx % 2 === 0 && idx < 4 ? (
-                    <ImageComponent src={el} key={idx + el} width="s" alt={el} />
-                  ) : null
-                )}
+                <Images
+                  src={info.commission.imageUrl[0]}
+                  alt={info.commission.imageUrl[0]}
+                  imgStyle="commissions"
+                />
               </StyledImgContainer>
             </StyledCommissionContainer>
             <StyledCommission>

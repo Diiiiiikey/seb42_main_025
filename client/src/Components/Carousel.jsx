@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 // import { getCommissionFn } from 'customHook/getCommissionFetch';
-import ImageComponent from './ImageComponent';
+import Images from './Images';
 import Typographies from './Typographies';
 import { useState } from 'react';
 
@@ -42,7 +42,7 @@ function Carousel({ items, changeCarouselImage }) {
         {items.map(item => {
           return (
             <ImageContainer key={item.commissionId}>
-              <ImageComponent src={item.imageUrl[1]} imgStyle="commission" width="xxxl" />
+              <Images src={item.imageUrl[1]} imgStyle="carousel" />
             </ImageContainer>
           );
         })}
@@ -58,11 +58,6 @@ const Container = styled.div`
 
 const StyledSlider = styled(Slider)`
   margin-top: 1rem;
-  .slick-slide {
-    display: flex;
-    align-items: center;
-    max-height: 20rem;
-  }
 
   .slick-prev {
     top: 8.5rem;
@@ -88,8 +83,6 @@ const StyledSlider = styled(Slider)`
 `;
 
 const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: row;
   width: 100%;
 `;
 

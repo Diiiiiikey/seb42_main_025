@@ -2,7 +2,7 @@ import Buttons from 'Components/Buttons';
 import Typographies from 'Components/Typographies';
 import styled from 'styled-components';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ImageComponent from 'Components/ImageComponent';
+import Images from 'Components/Images';
 
 function ProfileModule({ info }) {
   return (
@@ -10,9 +10,9 @@ function ProfileModule({ info }) {
       <Buttons text="수정" buttonStyle="smallEdit" />
       <StyledImgContainer>
         {info.image ? (
-          <ImageComponent src={info.image} alt="프로필 사진" width="l" />
+          <Images src={info.image} alt="프로필 사진" />
         ) : (
-          <AccountCircleIcon sx={{ fontSize: 250 }} />
+          <AccountCircleIcon sx={{ fontSize: 256 }} />
         )}
       </StyledImgContainer>
       {info && (
