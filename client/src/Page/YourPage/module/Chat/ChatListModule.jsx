@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Typography from 'Components/Typography';
 import ImageComponent from 'Components/ImageComponent';
 
-function ChatListModule({ info }) {
+function ListModule({ info }) {
   return (
     <StyledSummaryBox>
       <ImageComponent src={info.image} alt={info.writer} imgStyle="user" width="xs" />
@@ -30,4 +30,4 @@ const StyledSummaryBox = styled.div`
 
 const ContentContainer = styled.div``;
 
-export default ChatListModule;
+export default ListModule;

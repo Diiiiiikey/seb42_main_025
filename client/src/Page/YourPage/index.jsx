@@ -3,7 +3,6 @@ import { Container } from 'Container/Container';
 import ProgressModule from './module/Progress/ProgressModule';
 import ProfileModule from './module/Profile/ProfileModule';
 import CommissionsListModule from './module/Commissions/CommissionsListModule';
-import ChatModule from './module/Chat/ChatModule';
 import { getMemberInfoFn } from 'customHook/getMemberInfoFetch';
 import { useParams } from 'react-router-dom';
 import LoadingComponent from 'Components/LoadingComponent';
@@ -23,7 +22,6 @@ function YourPage() {
           {currentMemberInfo.data.roles[0] === 'AUTHOR' ? (
             <CommissionsListModule info={currentMemberInfo.data} />
           ) : null}
-          <ChatModule info={currentMemberInfo.data} />
         </StyledContents>
       )}
     </Container>

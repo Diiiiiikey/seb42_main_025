@@ -25,28 +25,6 @@ const fontSizes = {
   carousel: calcRem(32),
 };
 
-const paddings = {
-  xxs: calcRem(4),
-  xs: calcRem(8),
-  s: calcRem(12),
-  m: calcRem(16),
-  l: calcRem(20),
-  xl: calcRem(24),
-  xxl: calcRem(28),
-  xxxl: calcRem(32),
-};
-
-const margins = {
-  xxs: calcRem(4),
-  xs: calcRem(8),
-  s: calcRem(12),
-  m: calcRem(16),
-  l: calcRem(20),
-  xl: calcRem(24),
-  xxl: calcRem(28),
-  xxxl: calcRem(32),
-};
-
 const imgSizes = {
   xs: calcRem(48),
   s: calcRem(64),
@@ -251,8 +229,6 @@ const images = {
 
 const theme = {
   fontSizes,
-  paddings,
-  margins,
   imgSizes,
   imgStyles,
   colors,

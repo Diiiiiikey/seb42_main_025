@@ -14,7 +14,6 @@ const StyledContainer = styled.div.attrs(props => ({
   display: flex;
   align-items: center;
   grid-column: ${props => props.column};
-  margin: ${props => props.theme.margins[props.margin]};
   aspect-ratio: ${props => props.theme.imgStyles[props.imgStyle]};
   flex: ${props => props.flex};
   height: auto;

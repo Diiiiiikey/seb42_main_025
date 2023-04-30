@@ -3,6 +3,7 @@ import Carousel from 'Components/Carousel';
 import Commissions from 'Components/Commissions';
 import Typographies from 'Components/Typographies';
 import AdComponent from 'Components/AdComponent';
+import { Container } from 'Container/Container';
 import { useEffect, useState } from 'react';
 import { getCommissionsFn, getTagsCommissionsFn } from 'customHook/getCommissionFetch';
 import { getCommissions } from 'apis/api/commissions';
@@ -32,7 +33,7 @@ function Home() {
         commissionsFilterdCommissionId[0] &&
         commissionsFilterdTags.tagsCommissions[0] &&
         carouselBackground && (
-          <StyledContainer>
+          <Container>
             <Contents>
               <CarouselBox>
                 <Carousel
@@ -46,12 +47,22 @@ function Home() {
               </CarouselBox>
               <CarouselBoxBackground url={carouselBackground} />
               <SellContainer>
-                <Typographies text="새로운 커미션" typoStyle="title_1" variant="h2" margin="1rem" />
+                <Typographies
+                  text="새로운 커미션"
+                  typoStyle="title_1"
+                  variant="h2"
+                  margin="0 0 1rem 0"
+                />
                 <Commissions commissions={commissionsFilterdCommissionId} />
               </SellContainer>
               <AdComponent />
               <SellContainer>
-                <Typographies text="인기 커미션" typoStyle="title_1" variant="h2" margin="1rem" />
+                <Typographies
+                  text="인기 커미션"
+                  typoStyle="title_1"
+                  variant="h2"
+                  margin="0 0 1rem 0"
+                />
                 <Commissions commissions={commissionsFilterdViewCount} />
               </SellContainer>
               <SellContainer>
@@ -59,25 +70,16 @@ function Home() {
                   text="추천 태그 커미션"
                   typoStyle="title_1"
                   variant="h2"
-                  margin="1rem"
+                  margin="0 0 1rem 0"
                 />
                 <Commissions commissions={commissionsFilterdTags.tagsCommissions} />
               </SellContainer>
             </Contents>
-          </StyledContainer>
+          </Container>
         )}
     </>
   );
 }
-
-const StyledContainer = styled.div`
-  display: grid;
-  max-width: 1280px;
-  min-height: 100vh;
-  justify-content: center;
-  padding: 5rem 0;
-  overflow-x: hidden;
-`;
 
 const Contents = styled.div`
   display: grid;
@@ -91,7 +93,6 @@ const Contents = styled.div`
 const CarouselBox = styled.div`
   display: grid;
   justify-content: center;
-  padding: 10rem 0 7rem 0;
   grid-column: 1 / span 12;
   grid-row: 1 / span 1;
 `;

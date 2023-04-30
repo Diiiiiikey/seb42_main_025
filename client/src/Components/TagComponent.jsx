@@ -1,15 +1,23 @@
 import styled from 'styled-components';
 
-function TagComponent({ text, createTag, deleteTagItem, handleClickTag }) {
+function TagComponent({ text, deleteTagItem, handleClickTag, varient }) {
   return (
-    <StyledContainer onClick={createTag ? null : handleClickTag}>
-      <StyledTag>{text}</StyledTag>
-      {createTag && <StyledButton onClick={deleteTagItem}>X</StyledButton>}
-    </StyledContainer>
+    <>
+      {varient ? (
+        <StyledDivContainer as={varient}>
+          <StyledTag>{text}</StyledTag>
+          <StyledButton onClick={deleteTagItem}>X</StyledButton>
+        </StyledDivContainer>
+      ) : (
+        <StyledContainer onClick={handleClickTag}>
+          <StyledTag>{text}</StyledTag>
+        </StyledContainer>
+      )}
+    </>
   );
 }
 
-const StyledContainer = styled.button`
+const StyledDivContainer = styled.button`
   display: flex;
   height: fit-content;
   width: fit-content;
@@ -23,7 +31,9 @@ const StyledContainer = styled.button`
   background-color: transparent;
   white-space: nowrap;
   gap: 0.25rem;
+`;
 
+const StyledContainer = styled(StyledDivContainer)`
   cursor: pointer;
 
   &:hover {
@@ -47,6 +57,16 @@ const StyledButton = styled.button`
   border: none;
   background-color: #ddba9d;
   color: white;
+
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+  &:active {
+    filter: brightness(70%);
+    transform: translate(0, 1px);
+  }
 `;
 
 export default TagComponent;

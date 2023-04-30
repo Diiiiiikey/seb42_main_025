@@ -10,8 +10,6 @@ export function CreateTag({ setIsTags, defaultTags }) {
   const [isDuplication, setIsDuplication] = useState(false);
 
   const onKeyPress = e => {
-    e.preventDefault();
-
     if (e.target.value.length !== 0 && e.key === 'Enter') {
       submitTagItem();
       e.target.value = '';
@@ -47,6 +45,9 @@ export function CreateTag({ setIsTags, defaultTags }) {
         onChange={e => setTagItem(e.target.value)}
         onKeyPress={onKeyPress}
         value={tagItem}
+        onSubmit={e => {
+          e.preventDefault();
+        }}
       />
       {isDuplication && <Alert severity="error">이미 사용된 태그입니다</Alert>}
       <TagContainer>
@@ -54,7 +55,7 @@ export function CreateTag({ setIsTags, defaultTags }) {
           tagList.map(tag => {
             return (
               <div key={tag}>
-                <TagComponent text={tag} createTag="createTag" deleteTagItem={deleteTagItem} />
+                <TagComponent text={tag} deleteTagItem={deleteTagItem} varient="div" />
               </div>
             );
           })}
@@ -62,7 +63,7 @@ export function CreateTag({ setIsTags, defaultTags }) {
           defaultTags.map(tag => {
             return (
               <div key={tag}>
-                <TagComponent text={tag} createTag="createTag" />
+                <TagComponent text={tag} varient="div" />
               </div>
             );
           })}

@@ -18,6 +18,7 @@ const StyledFont = styled.span.attrs(props => ({
   word-wrap: break-word;
   width: 100%;
   margin: ${props => props.margin};
+  padding: ${props => props.theme.typos[props.typoStyle].padding};
   max-width: ${props => props.theme.typos[props.typoStyle].width};
   height: ${props => props.theme.typos[props.typoStyle].height};
   color: ${props => props.theme.typos[props.typoStyle].color};
@@ -27,6 +28,7 @@ const StyledFont = styled.span.attrs(props => ({
   -webkit-line-clamp: ${props => props.theme.typos[props.typoStyle].line};
   line-height: ${props => props.theme.typos[props.typoStyle].lineHeight};
   text-shadow: ${props => props.theme.typos[props.typoStyle].textShadow};
+  background-color: ${props => props.theme.typos[props.typoStyle].backgroundColor};
 `;
 
 export default Typographies;

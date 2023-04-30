@@ -16,7 +16,7 @@ function SearchPage() {
           <SearchResult>
             <StyledTitleContainer>
               <Typographies text={result} variant="h2" typoStyle="title_1" />
-              <Typographies text="에 대한 검색 결과" typoStyle="small" />
+              <Typographies text="에 대한 검색 결과" typoStyle="base_2" />
             </StyledTitleContainer>
           </SearchResult>
           <CommissionBox>

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Typography from 'Components/Typography';
-import ChatListModule from './ChatListModule';
+import ListModule from './ListModule';
 
-function ChatModule({ info }) {
+function Module({ info }) {
   return (
     <StyledContainer role={info.roles[0]}>
       <Typography
@@ -14,9 +14,9 @@ function ChatModule({ info }) {
         color="tea_2"
         padding="m"
       />
-      <StyledChatListBoxContainer>
-        <ChatListModule info={info} />
-      </StyledChatListBoxContainer>
+      <StyledListBoxContainer>
+        <ListModule info={info} />
+      </StyledListBoxContainer>
     </StyledContainer>
   );
 }
@@ -30,10 +30,10 @@ const StyledContainer = styled.aside.attrs(props => ({
   grid-row: ${props => (props.role === 'AUTHOR' ? null : '2 / span 1')};
 `;
 
-const StyledChatListBoxContainer = styled.div`
+const StyledListBoxContainer = styled.div`
   padding: 2rem;
   gap: 1rem;
   background-color: #ececec;
 `;
 
-export default ChatModule;
+export default Module;

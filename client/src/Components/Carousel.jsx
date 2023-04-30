@@ -53,7 +53,7 @@ function Carousel({ items, changeCarouselImage }) {
 
 const Container = styled.div`
   max-width: 40rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 `;
 
 const StyledSlider = styled(Slider)`

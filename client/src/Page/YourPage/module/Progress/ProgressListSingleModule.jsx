@@ -32,11 +32,11 @@ function ProgressListSingleModule({ info }) {
             <StyledCommissionContainer>
               <Typographies text={info.commission.title} typoStyle="title_4" variant="h3" />
               <StyledImgContainer>
-                <Images
-                  src={info.commission.imageUrl[0]}
-                  alt={info.commission.imageUrl[0]}
-                  imgStyle="commissions"
-                />
+                {info.commission.imageUrl.map((el, idx) =>
+                  idx % 2 === 0 && idx < 4 ? (
+                    <Images src={el} key={idx + el} alt={el} imgStyle="commission" />
+                  ) : null
+                )}
               </StyledImgContainer>
             </StyledCommissionContainer>
             <StyledCommission>
@@ -87,7 +87,7 @@ const StyledContainer = styled.div``;
 const StyledComponentContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   border: 1px solid #cecece;
   border-radius: 0.25rem;
   margin-top: 1rem;
@@ -98,7 +98,6 @@ const StyledCommissionContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 3;
-  padding-right: 0.5rem;
   gap: 0.5rem;
 `;
 
@@ -111,6 +110,7 @@ const StyledSummaryBox = styled.div`
   gap: 0.5rem;
   white-space: nowrap;
   border-left: 1px solid #cecece;
+  border-right: 1px solid #cecece;
 `;
 
 const StyledImgContainer = styled.div`
@@ -121,14 +121,14 @@ const StyledImgContainer = styled.div`
 
 const StyledCommission = styled.div`
   display: flex;
-  flex: 6;
+  flex: 8;
 `;
 
 const StyledClient = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  flex: 1;
+  flex: 2;
   gap: 1rem;
 `;
 
