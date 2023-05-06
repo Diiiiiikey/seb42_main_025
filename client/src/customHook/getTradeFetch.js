@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { getAuthorTrades, getMemberTrades } from 'apis/api/trade';
+import { getAuthorTrades, getMemberTrades, getTrade } from 'apis/api/trade';
+import { getUserInfo } from 'apis/api/user';
 
-export const getTradeFn = value => {
+export const getTradesFn = value => {
   const [trades, setTrades] = useState(null);
 
   useEffect(() => {
@@ -27,4 +28,26 @@ export const getTradeFn = value => {
   }
 
   return result;
+};
+
+export const getTradeFn = id => {
+  const [trades, setTrades] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [member, setMember] = useState(null);
+
+  useEffect(() => {
+    const fetch = async () => {
+      const { data, status } = await getTrade(id);
+      if (status < 300) {
+        setTrades(data);
+        const memberData = await getUserInfo(data.memberId);
+        if (memberData.status < 300) {
+          setMember(memberData.data.data);
+          setLoading(false);
+        }
+      }
+    };
+    fetch();
+  }, [setTrades, setMember, setLoading]);
+  return { trades, member, loading };
 };

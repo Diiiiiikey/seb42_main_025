@@ -15,6 +15,21 @@ export const postTrade = async data => {
   }
 };
 
+export const getTrade = async id => {
+  const token = localStorage.getItem('authorization');
+  try {
+    const res = await instance.get(`/trade/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    return res;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const getAuthorTrades = async data => {
   const token = localStorage.getItem('authorization');
   try {
@@ -52,7 +67,6 @@ export const patchTradeStatus = async (data, id) => {
         Authorization: token,
       },
     });
-    console.log(res);
     return res;
   } catch (err) {
     console.log(err);

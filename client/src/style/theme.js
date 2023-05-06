@@ -13,8 +13,6 @@ const device = {
 };
 
 const fontSizes = {
-  xxs: calcRem(4),
-  xs: calcRem(8),
   s: calcRem(12),
   content: calcRem(14),
   base: calcRem(16),
@@ -68,7 +66,7 @@ const colors = {
   gray_1: '#cecece',
   gray_2: '#ececec',
   gray_3: '#999999',
-  gray_4: '#666666',
+  gray_4: '#fafafa',
   tea_1: '#ddba9d',
   tea_2: '#ce8e5b',
   tea_3: '#f5e8dd',
@@ -130,36 +128,29 @@ const buttons = {
 const typos = {
   title_1: {
     size: fontSizes.title,
-    bold: 'bold',
     color: colors.tea_2,
     space: 'nowrap',
   },
   title_2: {
     size: fontSizes.title,
-    bold: 'bold',
-    height: sizes.h_s,
-    line: 2,
+    height: sizes.h_m,
   },
   title_3: {
     size: fontSizes.xl,
-    bold: 'bold',
     height: sizes.h_xs,
     lineHeight: fontSizes.xl,
   },
   title_4: {
     size: fontSizes.zl,
-    bold: 'bold',
   },
   carousel: {
     size: fontSizes.carousel,
-    bold: 'bold',
     color: colors.tea_2,
     space: 'nowrap',
     textShadow: '-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white',
   },
   commissions: {
     size: fontSizes.base,
-    bold: 'bold',
     height: sizes.h_xs,
   },
   commissionSub: {
@@ -172,13 +163,12 @@ const typos = {
     lineHeight: fontSizes.xl,
   },
   name: {
-    size: fontSizes.l,
-    bold: 'bold',
+    size: fontSizes.zl,
     color: colors.tea_2,
+    bold: 'bold',
   },
   name_2: {
     size: fontSizes.base,
-    bold: 'bold',
     color: colors.tea_2,
   },
   base: {
@@ -186,7 +176,6 @@ const typos = {
   },
   base_2: {
     size: fontSizes.content,
-    bold: 'bold',
     color: colors.gray_3,
   },
   date: {

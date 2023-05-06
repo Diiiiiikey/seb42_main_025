@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Buttons from 'Components/Buttons';
 import TradeModuleBox from './module/TradeModuleBox';
 import TextEditor from 'Components/Editor';
@@ -13,7 +13,7 @@ function TradePage() {
   const params = useParams();
   const editorRef = useRef(null);
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -28,7 +28,7 @@ function TradePage() {
 
     try {
       const res = await postTrade(data, token);
-      // navigate(`/chat/${res.tradeId}`);
+      navigate(`/form/${res.tradeId}`);
     } catch (error) {
       console.error(error);
     }

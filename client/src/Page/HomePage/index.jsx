@@ -115,7 +115,6 @@ const SellContainer = styled.div`
   justify-content: center;
   grid-column: 1 / span 12;
   flex-wrap: wrap;
-  padding-bottom: 3rem;
 `;
 
 export default Home;

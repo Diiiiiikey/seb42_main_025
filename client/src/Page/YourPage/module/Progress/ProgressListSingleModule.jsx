@@ -7,9 +7,11 @@ import { useState } from 'react';
 import { ReviewModal } from './ReviewModal';
 import LoadingComponent from 'Components/LoadingComponent';
 import { patchTradeStatus } from 'apis/api/trade';
+import { useNavigate } from 'react-router-dom';
 
 function ProgressListSingleModule({ info }) {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const openReviewerHandler = () => {
     setIsOpen(!isOpen);
@@ -21,6 +23,10 @@ function ProgressListSingleModule({ info }) {
     } else if (e.target.innerText === '거절') {
       patchTradeStatus({ status: '거절' }, e.target.id); // cors
     }
+  };
+
+  const clickedOpen = () => {
+    navigate(`/form/${info.tradeId}`);
   };
 
   return (
@@ -52,7 +58,7 @@ function ProgressListSingleModule({ info }) {
           </StyledComponentContainer>
           {info.status === '수락대기' ? (
             <StyledButtonContainer>
-              <Buttons text="채팅" buttonStyle="smallEdit" />
+              <Buttons text="채팅" buttonStyle="smallEdit" handleClick={clickedOpen} />
               <StyledRightButtons>
                 <Buttons
                   text="수락"

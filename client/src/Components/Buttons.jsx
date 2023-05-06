@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 
-function Buttons({ buttonType, text, handleClick, id, buttonStyle, color, margin }) {
+function Buttons({
+  buttonType,
+  text,
+  handleClick,
+  id,
+  buttonStyle,
+  color,
+  margin,
+  backgroundColor,
+  border,
+}) {
   return (
     <StyledButton
       id={id}
@@ -9,6 +19,8 @@ function Buttons({ buttonType, text, handleClick, id, buttonStyle, color, margin
       buttonStyle={buttonStyle}
       color={color}
       margin={margin}
+      backgroundColor={backgroundColor}
+      border={border}
     >
       {text}
     </StyledButton>
@@ -18,12 +30,17 @@ function Buttons({ buttonType, text, handleClick, id, buttonStyle, color, margin
 const StyledButton = styled.button.attrs(props => ({
   buttonStyle: props.buttonStyle,
 }))`
-  background-color: ${props => props.theme.buttons[props.buttonStyle].backgroundColor};
-  border: ${props => props.theme.buttons[props.buttonStyle].border};
+  background-color: ${props =>
+    props.theme.colors[props.backgroundColor] ||
+    props.theme.buttons[props.buttonStyle].backgroundColor};
+  border: ${props =>
+    props.border
+      ? `2px solid ${props.theme.colors[props.border]}`
+      : props.theme.buttons[props.buttonStyle].border};
   border-radius: ${props => props.theme.buttons[props.buttonStyle].borderRadius};
   font-size: ${props => props.theme.buttons[props.buttonStyle].size};
   color: ${props =>
-    props.theme.buttons[props.buttonStyle].color || props.theme.colors[props.color]};
+    props.theme.colors[props.color] || props.theme.buttons[props.buttonStyle].color};
   padding: ${props => props.theme.buttons[props.buttonStyle].padding};
   margin: ${props => props.margin};
   font-weight: bold;

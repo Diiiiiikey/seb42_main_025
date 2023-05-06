@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ProgressListModule from './ProgressListModule';
 import Typographies from 'Components/Typographies';
-import { getTradeFn } from 'customHook/getTradeFetch';
+import { getTradesFn } from 'customHook/getTradeFetch';
 import { useParams } from 'react-router-dom';
 
 export function ProgressModule({ info }) {
@@ -14,9 +14,9 @@ export function ProgressModule({ info }) {
   let tradeInfo;
 
   if (info.roles[0] === 'AUTHOR') {
-    tradeInfo = getTradeFn(authorData);
+    tradeInfo = getTradesFn(authorData);
   } else {
-    tradeInfo = getTradeFn(memberData);
+    tradeInfo = getTradesFn(memberData);
   }
 
   return (

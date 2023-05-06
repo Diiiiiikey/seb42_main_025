@@ -5,7 +5,7 @@ import styled from 'styled-components';
 function ReviewList({ info }) {
   return (
     <StyledSummaryBox>
-      <Typographies text={info.content} typoStyle="base_2" />
+      <Typographies text={info.content} typoStyle="base" />
       <Images src={info.image} alt={info.title} imgStyle="user" />
       <StyledWriterContainer>
         <Typographies text={info.writer} typoStyle="name_2" />
@@ -21,6 +21,7 @@ const StyledSummaryBox = styled.div`
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
   gap: 1rem;
   border-radius: 0.25rem;
   border: 1px solid #000;

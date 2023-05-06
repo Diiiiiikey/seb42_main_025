@@ -44,7 +44,7 @@ export const getTagsCommissionsFn = () => {
       }
     };
     fetch();
-  }, [setTagsCommissions, setLoading, setTag, tag]);
+  }, [setTagsCommissions, setLoading, setTag]);
   return { tagsCommissions, loading };
 };
 

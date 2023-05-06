@@ -6,6 +6,7 @@ import CreatePost from 'Page/CreatePost';
 import YourPage from 'Page/YourPage';
 import TradePage from 'Page/TradePage';
 import SearchPage from 'Page/SearchPage';
+import FormPage from 'Page/FormPage';
 import NotFoundPage from 'Page/NotFoundPage';
 
 export const routerList = [
@@ -51,12 +52,12 @@ export const routerList = [
     isPrivate: true,
     element: <CreatePost />,
   },
-  // {
-  //   id: 8,
-  //   path: '/chat/:id',
-  //   isPrivate: true, //true
-  //   element: <ChatPage />,
-  // },
+  {
+    id: 8,
+    path: '/form/:id',
+    isPrivate: true,
+    element: <FormPage />,
+  },
   {
     id: 9,
     path: '/mypage/:id',
