@@ -3,10 +3,14 @@ import styled from 'styled-components';
 function TagComponent({ text, deleteTagItem, handleClickTag, varient }) {
   return (
     <>
-      {varient ? (
+      {varient === 'div' ? (
         <StyledDivContainer as={varient}>
           <StyledTag>{text}</StyledTag>
           <StyledButton onClick={deleteTagItem}>X</StyledButton>
+        </StyledDivContainer>
+      ) : varient === 'span' ? (
+        <StyledDivContainer as={varient}>
+          <StyledTag>{text}</StyledTag>
         </StyledDivContainer>
       ) : (
         <StyledContainer onClick={handleClickTag}>
@@ -28,7 +32,7 @@ const StyledDivContainer = styled.button`
   font-size: 1rem;
   font-weight: bold;
   color: #606060;
-  background-color: transparent;
+  background-color: #fff;
   white-space: nowrap;
   gap: 0.25rem;
 `;

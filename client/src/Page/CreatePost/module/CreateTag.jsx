@@ -45,7 +45,7 @@ export function CreateTag({ setIsTags, defaultTags }) {
         onChange={e => setTagItem(e.target.value)}
         onKeyPress={onKeyPress}
         value={tagItem}
-        onSubmit={e => {
+        handleSubmit={e => {
           e.preventDefault();
         }}
       />

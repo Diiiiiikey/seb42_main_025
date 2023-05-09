@@ -1,37 +1,39 @@
 import { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Buttons from 'Components/Buttons';
 import TradeModuleBox from './module/TradeModuleBox';
 import TextEditor from 'Components/Editor';
+import { Container } from 'Container/Container';
+import InputComponent from 'Components/InputComponent';
 import { postTrade } from 'apis/api/trade';
+import { getCommissionFn } from 'customHook/getCommissionFetch.js';
 import Typographies from 'Components/Typographies';
+import LoadingComponent from 'Components/LoadingComponent';
 
 function TradePage() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const params = useParams();
   const editorRef = useRef(null);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleSubmit = async event => {
-    event.preventDefault();
+  const { id } = useParams();
+  const info = getCommissionFn(id);
 
-    const token = localStorage.getItem('authorization');
+  console.log(info);
 
-    const data = {
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    const value = {
       title: title.trim(),
       content: content.trim(),
-      commissionId: params.id,
+      commissionId: id,
     };
 
-    try {
-      const res = await postTrade(data, token);
-      navigate(`/form/${res.tradeId}`);
-    } catch (error) {
-      console.error(error);
-    }
+    postTrade(value);
+    // navigate(`/form/${res.tradeId}`);
   };
 
   const onEditorChange = () => {
@@ -41,60 +43,66 @@ function TradePage() {
 
   return (
     <Container>
-      <TradeModuleBox />
-      <TitleLabel>
-        <Typographies text="제목" typoStyle="base" />
-      </TitleLabel>
-      <TitleInput
-        type="text"
-        placeholder="제목을 입력하세요."
-        value={title}
-        onChange={event => setTitle(event.target.value)}
-      />
-      <TextEditor
-        editorRef={editorRef} // useRef로 생성한 ref 전달
-        editorHeight={'25rem'}
-        onEditorChange={onEditorChange}
-      />
-      <FormSpacer />
-      <form
-        onSubmit={handleSubmit}
-        style={{ position: 'absolute', bottom: '4rem', right: '0.5rem' }}
-      >
-        <Buttons type="submit" text="신청하기" buttonStyle="write" />
-      </form>
+      {info.commission ? (
+        <StyledContainer>
+          <StyledHeader>
+            <Typographies text={info.commission.memberName} typoStyle="name" width="fit-content" />
+            <Typographies text="작가의 커미션 신청 페이지" typoStyle="base" />
+          </StyledHeader>
+          <TradeModuleBox info={info} />
+          <StyledHr />
+          <StyledSection>
+            <Typographies
+              text="최대한 자세하게 신청폼을 작성해주세요"
+              typoStyle="base"
+              backgraoundColor="gray_4"
+              padding="1rem"
+            />
+            <InputComponent
+              placeholder="제목을 입력해주세요"
+              onChange={event => setTitle(event.target.value)}
+            />
+            <TextEditor
+              editorRef={editorRef} // useRef로 생성한 ref 전달
+              editorHeight={'25rem'}
+              onEditorChange={onEditorChange}
+            />
+          </StyledSection>
+          <Buttons type="submit" text="신청하기" buttonStyle="write" handleClick={handleSubmit} />
+        </StyledContainer>
+      ) : (
+        <LoadingComponent />
+      )}
     </Container>
   );
 }
 
-const Container = styled.div`
-  display: grid;
-  grid-gap: 5rem;
-  align-items: center;
-  justify-items: center;
-  position: relative;
-  margin-top: 10rem;
-`;
-
-const FormSpacer = styled.div`
-  margin-top: 2rem;
-`;
-
-const TitleLabel = styled.label`
-  font-size: 1rem;
-  width: 53%;
-  margin-top: -3rem;
-  margin-bottom: -13rem;
-  justify-self: start;
-`;
-
-const TitleInput = styled.input`
-  font-size: 1rem;
+const StyledContainer = styled.div`
+  display: flex;
+  align-self: center;
+  flex-direction: column;
   width: 100%;
-  margin-bottom: -3rem;
-  padding: 0.5rem;
-  border: 1px solid #dadde6;
-  margin-top: 1rem;
+  max-width: 50rem;
+  gap: 2rem;
+`;
+
+const StyledHeader = styled.header`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+`;
+
+const StyledHr = styled.hr`
+  display: flex;
+  opacity: 0.3;
+`;
+
+const StyledSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
 
 export default TradePage;

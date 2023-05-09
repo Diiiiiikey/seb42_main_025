@@ -12,10 +12,10 @@ function InputComponent({
   type = 'text',
   onKeyPress,
   defaultText,
-  onSubmit,
+  handleSubmit,
 }) {
   return (
-    <InputContainer onSubmit={onSubmit}>
+    <InputContainer onSubmit={handleSubmit}>
       <InputLabel label={label}>{label}</InputLabel>
       <InputWrapper error={error}>
         {placeholder === '태그 검색' ? (
@@ -52,7 +52,6 @@ const InputLabel = styled.label`
         display: flex;
         margin-bottom: 0.5rem;
         font-size: 1.25rem;
-        font-weight: bold;
         color: #ce8e5b;
       `;
     }

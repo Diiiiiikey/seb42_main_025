@@ -40,7 +40,7 @@ function Header() {
     }
   };
 
-  const handleSummit = async e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (search === null || search === '') {
       window.location.replace('/');
@@ -61,7 +61,7 @@ function Header() {
         <StyledInputContainer>
           <InputComponent
             placeholder="태그 검색"
-            onSubmit={handleSummit}
+            handleSubmit={handleSubmit}
             onChange={onChangeSearch}
           />
         </StyledInputContainer>

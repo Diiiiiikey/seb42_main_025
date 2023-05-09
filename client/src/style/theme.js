@@ -66,7 +66,7 @@ const colors = {
   gray_1: '#cecece',
   gray_2: '#ececec',
   gray_3: '#999999',
-  gray_4: '#fafafa',
+  gray_4: '#f6f6f6',
   tea_1: '#ddba9d',
   tea_2: '#ce8e5b',
   tea_3: '#f5e8dd',

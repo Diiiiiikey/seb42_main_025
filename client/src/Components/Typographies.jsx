@@ -29,11 +29,6 @@ function Typographies({
 
 const StyledFont = styled.span.attrs(props => ({
   typoStyle: props.typoStyle,
-  color: props.color,
-  backgraoundColor: props.backgraoundColor,
-  padding: props.padding,
-  width: props.width,
-  lineHeight: props.lineHeight,
 }))`
   display: -webkit-box;
   overflow: hidden;

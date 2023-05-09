@@ -1,15 +1,16 @@
 import { instance } from 'apis/utils';
 
-export const postTrade = async data => {
+export const postTrade = async value => {
   const token = localStorage.getItem('authorization');
+  console.log(value);
   try {
-    const res = await instance.post(`/trade`, data, {
+    const res = await instance.post(`/trade`, value, {
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
     });
-    return res.data;
+    return res;
   } catch (err) {
     console.log(err);
   }
@@ -64,7 +65,8 @@ export const patchTradeStatus = async (data, id) => {
   try {
     const res = await instance.patch(`/trade/${id}`, data, {
       headers: {
-        Authorization: token,
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
       },
     });
     return res;
