@@ -30,6 +30,9 @@
 ### Frontend ☺️
 ![42기_Team_025_프로젝트메뉴얼”-014](https://user-images.githubusercontent.com/58281884/228263988-018106dc-8f0a-4fd8-965d-0b34e4aebb22.png)
 
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+
+
 
 
 
