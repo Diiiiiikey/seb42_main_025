@@ -34,7 +34,6 @@
 
 
 ### Backend 😏
-![42기_Team_025_프로젝트메뉴얼”-015](https://user-images.githubusercontent.com/58281884/228251752-9c7445a6-4c46-4dba-862f-4f3bc479d0fc.png)
-
+<img src="https://img.shields.io/badge/java-E34F26?style=for-the-badge&logo=java&logoColor=white">
 
 커밋 메세지 컨벤션
