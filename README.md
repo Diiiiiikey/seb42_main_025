@@ -34,6 +34,6 @@
 
 
 ### Backend 😏
-<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=OpenJDK&logoColor=white"/>
+<img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=OpenJDK&logoColor=white"/>
 
 커밋 메세지 컨벤션
