@@ -26,9 +26,8 @@
 
 
 
-## 기술 스택
+## 기술 스택![MintChocoTea](https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/5d852ad5-0297-48a3-a9e8-99b4f81e5665)
 
-![MintChocoTea](https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/4eab1849-0ea6-4516-9f6a-2b31d734870c)
 
 
 커밋 메세지 컨벤션
