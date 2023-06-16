@@ -26,7 +26,8 @@
 
 
 
-## 기술 스택![MintChocoTea](https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/5d852ad5-0297-48a3-a9e8-99b4f81e5665)
+## 기술 스택
+![MintChocoTea](https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/5d852ad5-0297-48a3-a9e8-99b4f81e5665)
 
 
 
