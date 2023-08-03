@@ -33,10 +33,65 @@
 
 ---
 
-#### main page
+#### MAIN
+
 <details>
-<summary>SHOP PAGE</summary>
-<div markdown="1">
-  <img src="https://user-images.githubusercontent.com/51689628/194388882-bbbdcb49-93c0-4adf-9476-1e0e8c47ab36.gif">
-</div>
+  <summary>MAIN</summary>
+  <img src="https://github.com/codestates-seb/seb42_main_025/assets/108796919/c34323d6-16aa-4cae-a0d9-3a5a6bce2995" art="homepage">
 </details>
+
+<br/>
+
+#### SEARCH
+
+<details>
+  <summary>SEARCH</summary>
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/db032486-9ada-4b37-ab1a-a79d6812c3ec" art="searchpage">
+</details>
+
+<br/>
+
+#### SIGNUP & LOGIN
+
+<details>
+  <summary>SIGNUP & LOGIN</summary>
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/2dfc9ccb-a1d6-4fd2-93fe-475bae1f45eb" art="signup&login">
+</details>
+
+<br/>
+
+#### COMMISSION PAGE
+
+<details>
+  <summary>COMMISSION MYPAGE</summary>
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/7bd271ab-1b9a-460b-8b06-faab9d5f00fb" art="commissionpage">
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/a909447c-4470-4d19-a5f9-645d03778df1" art="commissionPost">
+</details>
+
+<br/>
+
+#### TRADE PAGE
+
+<details>
+  <summary>TRADE MYPAGE</summary>
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/e8f864ee-8403-489a-8fdb-0aaaac584b2a" art="tradePost">
+</details>
+
+<br/>
+
+#### USER MYPAGE
+
+<details>
+  <summary>USER MYPAGE</summary>
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/8e41b719-b56b-4d24-91cd-8477ecbd8b56" art="userMypage">
+</details>
+
+<br/>
+
+#### AUTHOR MYPAGE
+
+<details>
+  <summary>USER MYPAGE</summary>
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/9918422a-41a8-4603-b1f2-2b26b34d12e1" art="authorMypage">
+</details>
+
