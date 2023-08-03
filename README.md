@@ -34,5 +34,9 @@
 ---
 
 #### main page
-https://github.com/codestates-seb/seb42_main_025/assets/108796919/ed524e77-66a0-4268-b04e-28389e31cae2
-
+<details>
+<summary>SHOP PAGE</summary>
+<div markdown="1">
+  <img src="https://user-images.githubusercontent.com/51689628/194388882-bbbdcb49-93c0-4adf-9476-1e0e8c47ab36.gif">
+</div>
+</details>
