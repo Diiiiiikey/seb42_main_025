@@ -37,7 +37,8 @@
 
 <details>
   <summary>MAIN</summary>
-    <img src="https://github.com/codestates-seb/seb42_main_025/assets/108796919/4531681f-c2dd-40f5-846d-50396f6197c4">
+    <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/77309c33-a34b-46dd-a925-168d49e1e42c.gif" alt="homepage">
+
 </details>
 
 <br/>
@@ -46,7 +47,7 @@
 
 <details>
   <summary>SEARCH</summary>
-  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/db032486-9ada-4b37-ab1a-a79d6812c3ec" art="searchpage">
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/db032486-9ada-4b37-ab1a-a79d6812c3ec.gif" alt="searchpage">
 </details>
 
 <br/>
@@ -55,7 +56,7 @@
 
 <details>
   <summary>SIGNUP & LOGIN</summary>
-  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/2dfc9ccb-a1d6-4fd2-93fe-475bae1f45eb" art="signup&login">
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/2dfc9ccb-a1d6-4fd2-93fe-475bae1f45eb.gif" alt="signup&login">
 </details>
 
 <br/>
@@ -64,8 +65,8 @@
 
 <details>
   <summary>COMMISSION MYPAGE</summary>
-  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/7bd271ab-1b9a-460b-8b06-faab9d5f00fb" art="commissionpage">
-  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/a909447c-4470-4d19-a5f9-645d03778df1" art="commissionPost">
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/7bd271ab-1b9a-460b-8b06-faab9d5f00fb.gif" alt="commissionpage">
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/a909447c-4470-4d19-a5f9-645d03778df1.gif" alt="commissionPost">
 </details>
 
 <br/>
@@ -74,7 +75,7 @@
 
 <details>
   <summary>TRADE MYPAGE</summary>
-  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/e8f864ee-8403-489a-8fdb-0aaaac584b2a" art="tradePost">
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/e8f864ee-8403-489a-8fdb-0aaaac584b2a.gif" alt="tradePost">
 </details>
 
 <br/>
@@ -83,7 +84,7 @@
 
 <details>
   <summary>USER MYPAGE</summary>
-  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/8e41b719-b56b-4d24-91cd-8477ecbd8b56" art="userMypage">
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/8e41b719-b56b-4d24-91cd-8477ecbd8b56.gif" alt="userMypage">
 </details>
 
 <br/>
@@ -92,10 +93,5 @@
 
 <details>
   <summary>USER MYPAGE</summary>
-  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/9918422a-41a8-4603-b1f2-2b26b34d12e1" art="authorMypage">
-</details>
-
-<details>
-<summary>SIGN UP</summary>
-  <img src="https://user-images.githubusercontent.com/51689628/194391800-803b05f8-c810-4abc-b879-cd7c4fa9340c.gif">
+  <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/9918422a-41a8-4603-b1f2-2b26b34d12e1.gif" alt="authorMypage">
 </details>
