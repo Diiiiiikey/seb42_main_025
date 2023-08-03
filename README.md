@@ -37,9 +37,7 @@
 
 <details>
   <summary>MAIN</summary>
-  <div markdown="1">
-    <img src="https://github.com/codestates-seb/seb42_main_025/assets/108796919/c34323d6-16aa-4cae-a0d9-3a5a6bce2995" art="homepage">
-  </div>
+    <img src="https://github.com/codestates-seb/seb42_main_025/assets/108796919/4531681f-c2dd-40f5-846d-50396f6197c4">
 </details>
 
 <br/>
@@ -99,7 +97,5 @@
 
 <details>
 <summary>SIGN UP</summary>
-<div markdown="1">
   <img src="https://user-images.githubusercontent.com/51689628/194391800-803b05f8-c810-4abc-b879-cd7c4fa9340c.gif">
-</div>
 </details>
