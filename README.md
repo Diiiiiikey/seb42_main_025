@@ -97,3 +97,9 @@
   <img src="https://github.com/Diiiiiikey/seb42_main_025/assets/108796919/9918422a-41a8-4603-b1f2-2b26b34d12e1" art="authorMypage">
 </details>
 
+<details>
+<summary>SIGN UP</summary>
+<div markdown="1">
+  <img src="https://user-images.githubusercontent.com/51689628/194391800-803b05f8-c810-4abc-b879-cd7c4fa9340c.gif">
+</div>
+</details>
