@@ -37,7 +37,9 @@
 
 <details>
   <summary>MAIN</summary>
-  <img src="https://github.com/codestates-seb/seb42_main_025/assets/108796919/c34323d6-16aa-4cae-a0d9-3a5a6bce2995" art="homepage">
+  <div markdown="1">
+    <img src="https://github.com/codestates-seb/seb42_main_025/assets/108796919/c34323d6-16aa-4cae-a0d9-3a5a6bce2995" art="homepage">
+  </div>
 </details>
 
 <br/>
